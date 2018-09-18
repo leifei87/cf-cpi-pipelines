@@ -5,6 +5,7 @@ resources:
   source:
     uri: git@github.com:leifei87/cf-cpi-pipelines.git
     branch: master
+    private_key: {{git_private_key}}
 
 jobs:
 - name: bosh-deploy
