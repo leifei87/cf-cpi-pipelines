@@ -1,17 +1,10 @@
 ---
 resources:
-- name: azure-quickstart-templates
-  type: git
-  source:
-    uri: git@github.com:Azure/azure-quickstart-templates.git
-    branch: master
-
 - name: cf-cpi-pipelines
   type: git
   source:
     uri: git@github.com:leifei87/cf-cpi-pipelines.git
     branch: master
- 
 
 jobs:
 - name: bosh-deploy

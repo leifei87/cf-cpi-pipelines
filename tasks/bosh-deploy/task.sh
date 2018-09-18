@@ -5,21 +5,21 @@ set -e
 export BOSH_LOG_LEVEL="debug"
 export BOSH_LOG_PATH="./run.log"
 
-bosh create-env ~/azure-quickstart-templates/tree/master/bosh-setup/manifests/bosh.yml \
+bosh create-env ~/cf-cpi-pipelines/manifests/bosh.yml \
   --state=state.json \
   --vars-store=~/bosh-deployment-vars.yml \
-  -o ~/azure-quickstart-templates/tree/master/bosh-setup/manifests/cpi.yml \
-  -o ~/azure-quickstart-templates/tree/master/bosh-setup/manifests/custom-cpi-release.yml \
-  -o ~/azure-quickstart-templates/tree/master/bosh-setup/manifests/custom-bosh-tag.yml \
-  -o ~/azure-quickstart-templates/tree/master/bosh-setup/manifests/custom-environment.yml \
-  -o ~/azure-quickstart-templates/tree/master/bosh-setup/manifests/use-azure-dns.yml \
-  -o ~/azure-quickstart-templates/tree/master/bosh-setup/manifests/jumpbox-user.yml \
-  -o ~/azure-quickstart-templates/tree/master/bosh-setup/manifests/keep-failed-or-unreachable-vms.yml \
+  -o ~/cf-cpi-pipelines/manifests/cpi.yml \
+  -o ~/cf-cpi-pipelines/manifests/custom-cpi-release.yml \
+  -o ~/cf-cpi-pipelines/manifests/custom-bosh-tag.yml \
+  -o ~/cf-cpi-pipelines/manifests/custom-environment.yml \
+  -o ~/cf-cpi-pipelines/manifests/use-azure-dns.yml \
+  -o ~/cf-cpi-pipelines/manifests/jumpbox-user.yml \
+  -o ~/cf-cpi-pipelines/manifests/keep-failed-or-unreachable-vms.yml \
   -v cpi_release_sha1=372c0220e2e38ca9201135eccb52ff912f2d0538 \
   -v cpi_release_url=https://bosh.io/d/github.com/cloudfoundry-incubator/bosh-azure-cpi-release?v=35.4.0 \
-  -o ~/azure-quickstart-templates/tree/master/bosh-setup/manifests/enable-telemetry-and-boot-diagnostics.yml \
-  -o ~/azure-quickstart-templates/tree/master/bosh-setup/manifests/uaa.yml \
-  -o ~/azure-quickstart-templates/tree/master/bosh-setup/manifests/credhub.yml \
+  -o ~/cf-cpi-pipelines/manifests/enable-telemetry-and-boot-diagnostics.yml \
+  -o ~/cf-cpi-pipelines/manifests/uaa.yml \
+  -o ~/cf-cpi-pipelines/manifests/credhub.yml \
   -v director_name=azure \
   -v internal_cidr=10.0.0.0/24 \
   -v internal_gw=10.0.0.1 \

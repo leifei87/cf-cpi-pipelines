@@ -8,7 +8,6 @@ image_resource:
 
 inputs:
   - name: cf-cpi-pipelines
-  - name: azure-quickstart-templates
 
 run:
   path: cf-cpi-pipelines/tasks/bosh-deploy/task.sh
