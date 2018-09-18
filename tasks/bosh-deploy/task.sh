@@ -16,7 +16,6 @@ bosh create-env cf-cpi-pipelines/manifests/bosh.yml \
   -o cf-cpi-pipelines/manifests/keep-failed-or-unreachable-vms.yml \
   -v cpi_release_sha1=372c0220e2e38ca9201135eccb52ff912f2d0538 \
   -v cpi_release_url=https://bosh.io/d/github.com/cloudfoundry-incubator/bosh-azure-cpi-release?v=35.4.0 \
-  -o cf-cpi-pipelines/manifests/enable-telemetry-and-boot-diagnostics.yml \
   -o cf-cpi-pipelines/manifests/uaa.yml \
   -o cf-cpi-pipelines/manifests/credhub.yml \
   -v director_name=azure \
