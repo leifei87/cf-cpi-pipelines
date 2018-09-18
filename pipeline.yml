@@ -1,0 +1,28 @@
+---
+resources:
+- name: azure-quickstart-templates
+  type: git
+  source:
+    uri: git@github.com:Azure/azure-quickstart-templates.git
+    branch: master
+
+- name: cf-cpi-pipelines
+  type: git
+  source:
+    uri: git@github.com:leifei87/cf-cpi-pipelines.git
+    branch: master
+ 
+
+jobs:
+- name: bosh-deploy
+  serial: true
+  plan:
+  - get: cf-cpi-pipelines
+  - get: azure-quickstart-templates
+  - task: bosh-deploy
+    file: cf-cpi-pipelines/tasks/bosh-deploy/task.yml
+    params:
+      AZURE_SUBSCRIPTION_ID: {{azure_subscription_id}}
+      AZURE_TENANT_ID: {{azure_tenant_id}}
+      AZURE_CLIENT_ID: {{azure_client_id}}
+      AZURE_CLIENT_SECRET: {{azure_client_secret}}

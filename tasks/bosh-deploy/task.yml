@@ -1,0 +1,20 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: concourse/bosh-cli
+
+inputs:
+  - name: cf-cpi-pipelines
+  - name: azure-quickstart-templates
+
+run:
+  path: cf-cpi-pipelines/tasks/bosh-deploy/task.sh
+
+params:
+  AZURE_SUBSCRIPTION_ID:
+  AZURE_TENANT_ID:
+  AZURE_CLIENT_ID:
+  AZURE_CLIENT_SECRET:
