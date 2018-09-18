@@ -10,7 +10,6 @@ bosh create-env cf-cpi-pipelines/manifests/bosh.yml \
   --vars-store=~/bosh-deployment-vars.yml \
   -o cf-cpi-pipelines/manifests/cpi.yml \
   -o cf-cpi-pipelines/manifests/custom-cpi-release.yml \
-  -o cf-cpi-pipelines/manifests/custom-bosh-tag.yml \
   -o cf-cpi-pipelines/manifests/custom-environment.yml \
   -o cf-cpi-pipelines/manifests/use-azure-dns.yml \
   -o cf-cpi-pipelines/manifests/jumpbox-user.yml \
