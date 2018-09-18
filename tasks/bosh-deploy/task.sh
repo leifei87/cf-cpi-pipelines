@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 set -e
-
-export BOSH_LOG_LEVEL="debug"
+bosh -v
+#export BOSH_LOG_LEVEL="debug"
 export BOSH_LOG_PATH="./run.log"
 
 bosh create-env ~/cf-cpi-pipelines/manifests/bosh.yml \
