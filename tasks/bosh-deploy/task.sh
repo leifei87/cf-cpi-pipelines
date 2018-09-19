@@ -2,8 +2,11 @@
 
 set -e
 bosh -v
-#export BOSH_LOG_LEVEL="debug"
+export BOSH_LOG_LEVEL="debug"
 export BOSH_LOG_PATH="./run.log"
+
+echo "Installing OS specified dependencies for bosh create-env command"
+apt-get update && apt-get install -y build-essential zlibc zlib1g-dev ruby ruby-dev openssl libxslt-dev libxml2-dev libssl-dev libreadline6 libreadline6-dev libyaml-dev libsqlite3-dev sqlite3
 
 bosh create-env cf-cpi-pipelines/manifests/bosh.yml \
   --state=state.json \
