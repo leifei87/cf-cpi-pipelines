@@ -12,7 +12,6 @@ jobs:
   serial: true
   plan:
   - get: cf-cpi-pipelines
-  - get: azure-quickstart-templates
   - task: bosh-deploy
     file: cf-cpi-pipelines/tasks/bosh-deploy/task.yml
     params:

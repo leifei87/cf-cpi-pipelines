@@ -21,6 +21,8 @@ bosh create-env cf-cpi-pipelines/manifests/bosh.yml \
   -v cpi_release_url=https://bosh.io/d/github.com/cloudfoundry-incubator/bosh-azure-cpi-release?v=35.4.0 \
   -o cf-cpi-pipelines/manifests/uaa.yml \
   -o cf-cpi-pipelines/manifests/credhub.yml \
+  -o cf-cpi-pipelines/manifests/external-ip-with-registry-not-recommended.yml \
+  -v external_ip=13.80.110.113 \
   -v director_name=azure \
   -v internal_cidr=10.0.0.0/24 \
   -v internal_gw=10.0.0.1 \
