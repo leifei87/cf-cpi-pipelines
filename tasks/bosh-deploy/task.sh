@@ -10,7 +10,7 @@ apt-get update && apt-get install -y build-essential zlibc zlib1g-dev ruby ruby-
 
 bosh create-env cf-cpi-pipelines/manifests/bosh.yml \
   --state=state.json \
-  --vars-store=~/bosh-deployment-vars.yml \
+  --vars-store=bosh-director-cert/bosh-deployment-vars.yml \
   -o cf-cpi-pipelines/manifests/cpi.yml \
   -o cf-cpi-pipelines/manifests/custom-cpi-release.yml \
   -o cf-cpi-pipelines/manifests/custom-environment.yml \
