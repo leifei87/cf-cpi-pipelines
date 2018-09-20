@@ -9,7 +9,7 @@ image_resource:
 inputs:
   - name: cf-cpi-pipelines
 outputs:
-  - name: bosh-director-cert
+  - name: vars
 run:
   path: cf-cpi-pipelines/tasks/bosh-deploy/task.sh
 
