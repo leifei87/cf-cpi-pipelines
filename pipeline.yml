@@ -15,7 +15,17 @@ jobs:
   - task: bosh-deploy
     file: cf-cpi-pipelines/tasks/bosh-deploy/task.yml
     params:
-      AZURE_SUBSCRIPTION_ID: {{azure_subscription_id}}
-      AZURE_TENANT_ID: {{azure_tenant_id}}
-      AZURE_CLIENT_ID: {{azure_client_id}}
-      AZURE_CLIENT_SECRET: {{azure_client_secret}}
+      SUBSCRIPTION_ID: {{subscription_id}}
+      TENANT_ID: {{tenant_id}}
+      CLIENT_ID: {{client_id}}
+      CLIENT_SECRET: {{client_secret}}
+      REGION: {{region}}
+      RESOURCE_GROUP_PREFIX: {{resource_group_prefix}}
+      BOSH_SECURITY_GROUP: {{bosh_security_group}}
+      CF_SECURITY_GROUP: {{cf_security_group}}
+      VNET_NAME: {{vnet_name}}
+      BOSH_SUBNET_NAME: {{bosh_subnet_name}}
+      CF_SUBNET_NAME: {{cf_subnet_name}}
+      VNETWORK_CIDR: {{network_cidr}}
+      BOSH_SUBNET_CIDR: {{bosh_subnet_cidr}}
+      CF_SUBNET_CIDR: {{cf_subnet_cidr}}

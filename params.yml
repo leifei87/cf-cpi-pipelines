@@ -1,5 +1,26 @@
-azure_client_id: CHANGEME
-azure_client_secret: CHANGEME
-azure_subscription_id: CHANGEME
-azure_tenant_id: CHANGEME
+#Azure service principle info
+client_id: CHANGEME
+client_secret: CHANGEME
+subscription_id: CHANGEME
+tenant_id: CHANGEME
+
+#Private key for git account
 git_private_key: CHANGEME
+
+environment: AzureCloud
+region: CHANGEME
+resource_group_prefix: ICA-RG-CPI-
+#VM instance type for bosh director
+instance_type: Standard_D2_v2
+
+#Network info for bosh and cf 
+bosh_security_group: bosh-nsg
+cf_security_group: cf-nsg
+vnet_name: boshvnet-crp
+bosh_subnet_name: Bosh
+cf_subnet_name: CloudFoundry
+network_cidr: 10.0.0.0/16
+bosh_subnet_cidr: 10.0.0.0/24
+cf_subnet_cidr: 10.0.16.0/20
+bosh_private_ip: 10.0.0.4
+bosh_gateway: 10.0.0.1
