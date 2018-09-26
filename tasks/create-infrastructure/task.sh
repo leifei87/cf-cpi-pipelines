@@ -32,7 +32,7 @@ terraform plan \
   -var "cf_subnet_name=${CF_SUBNET_NAME}" \
   -var "network_cidr=${VNETWORK_CIDR}" \
   -var "bosh_subnet_cidr=${BOSH_SUBNET_CIDR}" \
-  -var "cf_subnet_cidr=${cf_SUBNET_CIDR}" \
+  -var "cf_subnet_cidr=${CF_SUBNET_CIDR}" \
   -out terraform.tfplan \
   cf-cpi-pipelines/terraform/azure-base
 
