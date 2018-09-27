@@ -36,7 +36,7 @@ bosh create-env cf-cpi-pipelines/manifests/bosh.yml \
   -v vnet_name=${VNET_NAME} \
   -v subnet_name=${BOSH_SUBNET_NAME} \
   -v default_security_group=${BOSH_SUBNET_NAME} \
-  -v environment=${BOSH_SUBNET_NAME} \
+  -v environment=${ENVIRONMENT} \
   -v subscription_id=${SUBSCRIPTION_ID} \
   -v tenant_id=${TENANT_ID} \
   -v client_id=${CLIENT_ID} \

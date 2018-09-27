@@ -37,6 +37,7 @@ jobs:
       TENANT_ID: {{tenant_id}}
       CLIENT_ID: {{client_id}}
       CLIENT_SECRET: {{client_secret}}
+      ENVIRONMENT: {{environment}}
       REGION: {{region}}
       RESOURCE_GROUP_PREFIX: {{resource_group_prefix}}
       BOSH_SECURITY_GROUP: {{bosh_security_group}}
