@@ -3,8 +3,8 @@
 set -e
 bosh -v
 
-echo "Installing OS specified dependencies for bosh create-env command"
-apt-get update && apt-get install -y wget
+echo "Installing OS specified dependencies"
+apt-get update && apt-get install -y tzdata wget
 wget https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip
 unzip terraform_0.11.8_linux_amd64.zip 
 mv terraform /usr/bin/
