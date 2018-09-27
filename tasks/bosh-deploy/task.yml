@@ -8,13 +8,26 @@ image_resource:
 
 inputs:
   - name: cf-cpi-pipelines
+  - name: terraform-state
 outputs:
   - name: vars
 run:
   path: cf-cpi-pipelines/tasks/bosh-deploy/task.sh
 
 params:
-  AZURE_SUBSCRIPTION_ID:
-  AZURE_TENANT_ID:
-  AZURE_CLIENT_ID:
-  AZURE_CLIENT_SECRET:
+  SUBSCRIPTION_ID:
+  TENANT_ID:
+  CLIENT_ID:
+  CLIENT_SECRET:
+  REGION:
+  RESOURCE_GROUP_PREFIX:
+  BOSH_SECURITY_GROUP:
+  CF_SECURITY_GROUP:
+  VNET_NAME:
+  BOSH_SUBNET_NAME:
+  CF_SUBNET_NAME:
+  VNETWORK_CIDR:
+  BOSH_SUBNET_CIDR:
+  CF_SUBNET_CIDR:
+  BOSH_PRIVATE_IP:
+  BOSH_GATEWAY:
