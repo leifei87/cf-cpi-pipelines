@@ -37,8 +37,8 @@ bosh create-env cf-cpi-pipelines/manifests/bosh.yml \
   -v subnet_name=${BOSH_SUBNET_NAME} \
   -v default_security_group=${BOSH_SUBNET_NAME} \
   -v environment=${BOSH_SUBNET_NAME} \
-  -v subscription_id=${AZURE_SUBSCRIPTION_ID} \
-  -v tenant_id=${AZURE_TENANT_ID} \
-  -v client_id=${AZURE_CLIENT_ID} \
-  -v client_secret=${AZURE_CLIENT_SECRET} \
+  -v subscription_id=${SUBSCRIPTION_ID} \
+  -v tenant_id=${TENANT_ID} \
+  -v client_id=${CLIENT_ID} \
+  -v client_secret=${CLIENT_SECRET} \
   -v storage_account_name=${STORAGE_ACCOUNT_NAME}
