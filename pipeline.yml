@@ -49,3 +49,4 @@ jobs:
       CF_SUBNET_CIDR: {{cf_subnet_cidr}}
       BOSH_PRIVATE_IP: {{bosh_private_ip}}
       BOSH_GATEWAY: {{bosh_gateway}}
+      INSTANCE_TYPE: {{instance_type}}
