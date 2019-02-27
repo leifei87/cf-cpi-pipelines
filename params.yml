@@ -9,7 +9,7 @@ tenant_id: CHANGEME
 git_private_key: CHANGEME
 
 environment: AzureCloud
-region: westeurope
+region: CHANGEME
 resource_group_prefix: ICA-RG-CPI-
 #VM instance type for bosh director
 instance_type: Standard_D2_v2
@@ -22,6 +22,6 @@ bosh_subnet_name: Bosh
 cf_subnet_name: CloudFoundry
 network_cidr: 10.0.0.0/16
 bosh_subnet_cidr: 10.0.0.0/24
-cf_subnet_cidr: 10.0.16.0/20
+cf_subnet_cidr: 10.0.17.0/20
 bosh_private_ip: 10.0.0.4
 bosh_gateway: 10.0.0.1
