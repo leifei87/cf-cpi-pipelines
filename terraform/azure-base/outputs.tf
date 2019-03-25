@@ -17,3 +17,7 @@ output "bosh_external_ip" {
 output "cf_external_ip" {
   value = "${azurerm_public_ip.cf.ip_address}"
 }
+
+output "label" {
+  value = "concourse ci for cf"
+}
